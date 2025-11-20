@@ -39,3 +39,10 @@ body {
     color: inherit;
     text-decoration: none;
 }
+
+.lt {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 6rem;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
