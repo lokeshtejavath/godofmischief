@@ -1,0 +1,1 @@
+const memeLink = "https://tenor.com/view/thanos-gif-25117042";
