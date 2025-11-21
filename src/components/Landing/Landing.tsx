@@ -45,6 +45,7 @@ export default function Landing() {
             <div className="Name">
                 <span className="NamePrimary">Hi I'm <strong>Lokesh Tejavath</strong> </span> <span className="NameAKA">a.k.a GodOfMischief</span>
             </div>
+
             <div className="Description">
                 <p>
                     <span className="typing" aria-live="polite">
