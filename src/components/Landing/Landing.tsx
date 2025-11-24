@@ -42,19 +42,27 @@ export default function Landing() {
     return (
         <div className="landing-container">
 
-            <div className="Name">
-                <span className="NamePrimary">Hi I'm <strong>Lokesh Tejavath</strong> </span> <span className="NameAKA">a.k.a GodOfMischief</span>
+            <div className="Left">
+                <div className="Name">
+                    <span className="NamePrimary">Hi I'm <strong>Lokesh Tejavath</strong> </span>
+                    <span className="NameAKA">a.k.a GodOfMischief</span>
+                </div>
+
+                <div className="Description">
+                    <p>
+                        <span className="typing" aria-live="polite">
+                            {prefix}
+                            <strong>{phrases[wordIndex].slice(0, charIndex)}</strong>
+                        </span>
+                        <span className="cursor" aria-hidden="true"></span>
+                    </p>
+                </div>
             </div>
 
-            <div className="Description">
-                <p>
-                    <span className="typing" aria-live="polite">
-                        {prefix}
-                        <strong>{phrases[wordIndex].slice(0, charIndex)}</strong>
-                    </span>
-                    <span className="cursor" aria-hidden="true"></span>
-                </p>
+            <div className="ImageContainer">
+                <img src="src/assets/20240509_171131.jpg" alt="Lokesh Tejavath" className="ProfileImage" />
             </div>
+
         </div>
     )
 }

@@ -1,5 +1,5 @@
-const memeLink = "https://tenor.com/view/captain-phillips-look-at-me-im-the-captain-now-gif-5038544";
-const memeCaption = "Look at me, I'm the frontend developer now.";
+const memeLink = "https://tenor.com/view/nice-click-nice-man-guy-gif-21933845";
+const memeCaption = "nice";
 
 export default {
     memeLink,
