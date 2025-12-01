@@ -66,6 +66,17 @@
     height: 480px;
     object-fit: cover;
     border-radius: 50%;
+    /* overflow: hidden; */
     /* soft all-around purple glow + subtle depth */
     box-shadow: 0 0 30px rgba(124, 77, 255), 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: opacity 420ms ease;
+    opacity: 1;
+}
+
+/* cloned image that animates to the navbar */
+.floating-clone {
+    pointer-events: none;
+    will-change: top, left, width, height, border-radius;
+    transition: all 600ms cubic-bezier(.2, .9, .2, 1);
+    opacity: 1;
 }

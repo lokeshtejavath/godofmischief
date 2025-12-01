@@ -5,7 +5,7 @@ import './NavBar.css';
 export default function NavBar() {
     return (
         <>
-            <nav className="p-4 bg-gray-800 text-white navbar">
+            <nav id="site-navbar" className="p-4 bg-gray-800 text-white navbar">
                 <span className="text-lg font-bold lt">&lt; LT /&gt;;</span>
                 <ul className="flex space-x-4">
                     <li><a href="#" className="hover:underline">Home</a></li>
