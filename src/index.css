@@ -17,9 +17,10 @@
 
 
 
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
-  background-color: var(--primay-back);
+  /* background-color: var(--primay-back); */
+  background-image: url('https://media.gettyimages.com/id/1433485090/video/dots-makes-global-world-map-global-wireframe-polygonal-lines.jpg?s=640x640&k=20&c=6TpfX8QHt9IPnF0s5HkwOaNoqcNbtYP99Ceh7-iR8MI=');
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -43,6 +44,7 @@ body {
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  /* background-image: url('https://webflow.com/blog/patterns-for-websites'); */
 }
 
 h1 {
@@ -87,9 +89,9 @@ button:focus-visible {
 }
 
 .glass {
-  background-color: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }

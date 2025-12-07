@@ -65,7 +65,7 @@ export default function Landing() {
                 clone.style.left = `${imgRect.left}px`
                 clone.style.width = `${imgRect.width}px`
                 clone.style.height = `${imgRect.height}px`
-                clone.style.transition = 'all 600ms cubic-bezier(.2,.9,.2,1)'
+                clone.style.transition = 'all 1200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)'
                 clone.style.zIndex = '9999'
                 clone.style.borderRadius = getComputedStyle(img).borderRadius || '50%'
                 clone.style.objectFit = 'cover'
@@ -158,29 +158,31 @@ export default function Landing() {
     }, [])
 
     return (
-        <div className="landing-container" ref={containerRef}>
+        <div className="landing-wrapper">
+            <div className="landing-container glass" ref={containerRef}>
 
-            <div className="Left">
-                <div className="Name">
-                    <span className="NamePrimary">Hi I'm <strong>Lokesh Tejavath</strong> </span>
-                    <span className="NameAKA">a.k.a GodOfMischief</span>
+                <div className="Left">
+                    <div className="Name">
+                        <span className="NamePrimary">Hi I'm <strong>Lokesh Tejavath</strong> </span>
+                        <span className="NameAKA">a.k.a GodOfMischief</span>
+                    </div>
+
+                    <div className="Description">
+                        <p>
+                            <span className="typing" aria-live="polite">
+                                {prefix}
+                                <strong>{phrases[wordIndex].slice(0, charIndex)}</strong>
+                            </span>
+                            <span className="cursor" aria-hidden="true"></span>
+                        </p>
+                    </div>
                 </div>
 
-                <div className="Description">
-                    <p>
-                        <span className="typing" aria-live="polite">
-                            {prefix}
-                            <strong>{phrases[wordIndex].slice(0, charIndex)}</strong>
-                        </span>
-                        <span className="cursor" aria-hidden="true"></span>
-                    </p>
+                <div className="ImageContainer">
+                    <img ref={imgRef} src="src/assets/20240509_171131.jpg" alt="Lokesh Tejavath" className="ProfileImage" />
                 </div>
-            </div>
 
-            <div className="ImageContainer">
-                <img ref={imgRef} src="src/assets/20240509_171131.jpg" alt="Lokesh Tejavath" className="ProfileImage" />
             </div>
-
         </div>
     )
 }
