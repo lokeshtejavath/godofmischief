@@ -41,13 +41,15 @@ export default function Landing() {
             if (charIndex > 0) {
                 timer = setTimeout(() => setCharIndex((c) => c - 1), deletingSpeed)
             } else {
-                setIsDeleting(false)
-                setWordIndex((w) => (w + 1) % phrases.length)
+                timer = setTimeout(() => {
+                    setIsDeleting(false)
+                    setWordIndex((w) => (w + 1) % phrases.length)
+                }, 500)
             }
         }
 
         return () => clearTimeout(timer)
-    }, [charIndex, isDeleting, wordIndex])
+    }, [charIndex, isDeleting, wordIndex, currentPhrase, phrases.length])
 
     useEffect(() => {
         const container = containerRef.current
