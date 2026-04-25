@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import "./Landing.css"
+import profilePicture from "../../assets/imageedit_2_4659955430.jpg"
 
 export default function Landing() {
     const phrases = [
@@ -189,7 +190,7 @@ export default function Landing() {
                 </div>
 
                 <div className="ImageContainer">
-                    <img ref={imgRef} src="src/assets/imageedit_2_4659955430.jpg" alt="Lokesh Tejavath" className="ProfileImage" />
+                    <img src={profilePicture} alt="Lokesh Tejavath" className="ProfileImage" />
                     <svg className="ArcaneRing" viewBox="0 0 500 500">
                     <defs>
                         {/* This path defines the perfect circle the text will follow */}
