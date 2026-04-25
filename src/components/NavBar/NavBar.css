@@ -43,7 +43,7 @@ body {
 .lt {
     font-size: 1.5rem;
     font-weight: bold;
-    padding-left: 6rem;
+    padding-left: 5rem;
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     color: var(--util-white, #F8F9FA); 
     
