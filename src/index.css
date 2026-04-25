@@ -2,12 +2,12 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
 
-  --primay: #c8a2ff;
+  --primary: #c8a2ff;
   --accent: #7c4dff;
 
   --emphasis: #A678FF;
-  --primay-back: #0A0A0A;
-  --secondary-back: #1A1A1A;
+  --primay-back: #130f33;
+  --secondary-back: #34324d;
 
   --text-colour: #F5F5F5;
   --subtle-text-colour: #A3A3A3;
@@ -18,9 +18,9 @@
 
 
   /* color-scheme: light dark; */
-  color: rgba(255, 255, 255, 0.87);
-  /* background-color: var(--primay-back); */
-  background-image: url('https://media.gettyimages.com/id/1433485090/video/dots-makes-global-world-map-global-wireframe-polygonal-lines.jpg?s=640x640&k=20&c=6TpfX8QHt9IPnF0s5HkwOaNoqcNbtYP99Ceh7-iR8MI=');
+  color: var(--primary);
+  background-color: var(--primay-back);
+  /* background-image: url('https://media.gettyimages.com/id/1433485090/video/dots-makes-global-world-map-global-wireframe-polygonal-lines.jpg?s=640x640&k=20&c=6TpfX8QHt9IPnF0s5HkwOaNoqcNbtYP99Ceh7-iR8MI='); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -2,15 +2,21 @@ import { useEffect, useRef, useState } from "react"
 import "./Landing.css"
 
 export default function Landing() {
-    const prefix = "I'm a "
     const phrases = [
         'passionate software developer.',
         'full-stack engineer.',
         'problem solver.',
-        'open-source enthusiast.'
+        'open-source enthusiast.',
+        'AI Engineer.',
     ]
 
     const [wordIndex, setWordIndex] = useState(0)
+    const currentPhrase = phrases[wordIndex]
+
+    const getPrefix = (phrase: string) => {
+        const firstChar = phrase.trim().charAt(0).toLowerCase()
+        return ['a', 'e', 'i', 'o', 'u'].includes(firstChar) ? "I'm an " : "I'm a "
+    }
     const [charIndex, setCharIndex] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false)
 
@@ -20,7 +26,7 @@ export default function Landing() {
 
     useEffect(() => {
         let timer: ReturnType<typeof setTimeout>
-        const current = phrases[wordIndex]
+        const current = currentPhrase
         const typingSpeed = 60
         const deletingSpeed = 30
         const pauseAfterTyping = 1000
@@ -163,15 +169,17 @@ export default function Landing() {
 
                 <div className="Left">
                     <div className="Name">
-                        <span className="NamePrimary">Hi I'm <strong>Lokesh Tejavath</strong> </span>
+                        <span className="NamePrimary" style={{ color: 'var(--primary)' }}>
+                            Hi I'm <strong style={{color:'var(--accent)'}}>Lokesh Tejavath </strong>
+                        </span>
                         <span className="NameAKA">a.k.a GodOfMischief</span>
                     </div>
 
                     <div className="Description">
                         <p>
                             <span className="typing" aria-live="polite">
-                                {prefix}
-                                <strong>{phrases[wordIndex].slice(0, charIndex)}</strong>
+                                {getPrefix(currentPhrase)}
+                                <strong>{currentPhrase.slice(0, charIndex)}</strong>
                             </span>
                             <span className="cursor" aria-hidden="true"></span>
                         </p>
@@ -179,7 +187,18 @@ export default function Landing() {
                 </div>
 
                 <div className="ImageContainer">
-                    <img ref={imgRef} src="src/assets/20240509_171131.jpg" alt="Lokesh Tejavath" className="ProfileImage" />
+                    <img ref={imgRef} src="src/assets/imageedit_2_4659955430.jpg" alt="Lokesh Tejavath" className="ProfileImage" />
+                    <svg className="ArcaneRing" viewBox="0 0 500 500">
+                    <defs>
+                        {/* This path defines the perfect circle the text will follow */}
+                        <path id="circlePath" d="M 250, 250 m -235, 0 a 235,235 0 1,1 470,0 a 235,235 0 1,1 -470,0" />
+                    </defs>
+                    <text className="ArcaneText">
+                        <textPath href="#circlePath" startOffset="0%">
+                            // ZERO TRUST ARCHITECTURE // DECENTRALIZED PROTOCOLS // FULL-STACK ENGINEERING // STEGANOGRAPHY ACTIVE //
+                        </textPath>
+                    </text>
+                </svg>
                 </div>
 
             </div>

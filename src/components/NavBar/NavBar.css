@@ -45,4 +45,10 @@ body {
     font-weight: bold;
     padding-left: 6rem;
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: var(--util-white, #F8F9FA); 
+    
+
+    text-shadow: 
+        0 0 12px rgba(167, 139, 250, 0.4), 
+        0 0 4px rgba(255, 255, 255, 0.2);
 }
