@@ -19,15 +19,11 @@
 }
 
 @media (max-width: 760px) {
-    .about-container {
-        /* Bootstrap responsive padding */
-    }
+
 }
 
 @media (max-width: 520px) {
-    .about-container {
-        /* Bootstrap responsive padding and border-radius */
-    }
+
 
     .about-container p {
         font-size: 0.98rem;
