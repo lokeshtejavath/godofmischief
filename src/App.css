@@ -1,6 +1,5 @@
 #root {
-  margin: 0 auto;
-  padding: 2rem;
+  /* Bootstrap container-fluid handles centering and padding */
   text-align: left;
 }
 

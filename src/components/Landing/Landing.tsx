@@ -167,10 +167,10 @@ export default function Landing() {
     }, [])
 
     return (
-        <div className="landing-wrapper">
-            <div className="landing-container glass" ref={containerRef}>
+        <div className="landing-wrapper d-flex align-items-center justify-content-center">
+            <div className="landing-container glass container-xl row align-items-center w-100" ref={containerRef}>
 
-                <div className="Left">
+                <div className="Left col-lg-6 d-flex flex-column gap-3">
                     <div className="Name">
                         <span className="NamePrimary" style={{ color: 'var(--primary)' }}>
                             Hi I'm <strong style={{color:'var(--accent)'}}>Lokesh Tejavath </strong>
@@ -178,8 +178,8 @@ export default function Landing() {
                         <span className="NameAKA">a.k.a GodOfMischief</span>
                     </div>
 
-                    <div className="Description">
-                        <p>
+                    <div className="Description fs-base lh-lg">
+                        <p className="mb-0">
                             <span className="typing" aria-live="polite">
                                 {getPrefix(currentPhrase)}
                                 <strong>{currentPhrase.slice(0, charIndex)}</strong>
@@ -189,7 +189,7 @@ export default function Landing() {
                     </div>
                 </div>
 
-                <div className="ImageContainer">
+                <div className="ImageContainer col-lg-6 d-flex align-items-center justify-content-center">
                     <img src={profilePicture} alt="Lokesh Tejavath" className="ProfileImage" />
                     <svg className="ArcaneRing" viewBox="0 0 500 500">
                     <defs>

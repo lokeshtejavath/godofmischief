@@ -8,13 +8,11 @@ function App() {
   console.log(todaysMeme.memeLink);
 
   return (
-    <>
-      <div className="App">
-        <NavBar />
-        <Landing />
-        <About />
-      </div>
-    </>
+    <div className="App container-fluid">
+      <NavBar />
+      <Landing />
+      <About />
+    </div>
   )
 }
 

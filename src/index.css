@@ -44,6 +44,8 @@ body {
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  padding-top: 56px;
+  background-color: var(--primay-back);
   /* background-image: url('https://webflow.com/blog/patterns-for-websites'); */
 }
 
@@ -76,7 +78,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #130f33;
   }
 
   a:hover {
@@ -84,7 +86,7 @@ button:focus-visible {
   }
 
   button {
-    background-color: #f9f9f9;
+    background-color: #130f33;
   }
 }
 
