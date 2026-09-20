@@ -3,9 +3,9 @@ import './Contact.css'
 
 export default function Contact() {
   const contactLinks = [
-    { label: 'Email', href: 'mailto:lokesh@example.com', icon: '@' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/lokesh-tejavath', icon: 'in' },
-    { label: 'GitHub', href: 'https://github.com/lokesh', icon: 'gh' },
+    { label: 'Email', href: 'mailto:i@lokeshtejavath.com', icon: '@' },
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/lokeshtejavath', icon: 'in' },
+    { label: 'GitHub', href: 'https://github.com/lokeshtejavath', icon: 'gh' },
   ]
 
   return (
