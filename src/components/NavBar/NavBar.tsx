@@ -37,6 +37,14 @@ export default function NavBar({ lenis }: NavBarProps) {
     }
   }
 
+  const scrollToTop = () => {
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 })
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
     <motion.nav
       className={`navbar ${isScrolled ? 'scrolled' : ''}`}
@@ -45,9 +53,13 @@ export default function NavBar({ lenis }: NavBarProps) {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <div className="navbar-container">
-        <div className="navbar-brand">
+        <button
+          className="navbar-brand"
+          onClick={scrollToTop}
+          title="Scroll to top"
+        >
           {'< LT />'}
-        </div>
+        </button>
 
         <div className="navbar-links">
           <button onClick={() => scrollTo('hero')}>Hero</button>

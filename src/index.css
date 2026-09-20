@@ -31,18 +31,18 @@
 
 /* Light Mode */
 [data-theme='light'] {
-  --black: #faf8f6;
-  --black-soft: #f0ebe5;
-  --maroon-deep: #8b4a52;
-  --maroon: #a0555d;
-  --maroon-dust: #b87578;
-  --pale: #2a1f1a;
-  --pale-dim: #5c4a45;
-  --pale-faint: #8b7770;
+  --black: #fbf9f7;
+  --black-soft: #f3ede7;
+  --maroon-deep: #8b7278;
+  --maroon: #a0878f;
+  --maroon-dust: #c9abb8;
+  --pale: #3a2f2c;
+  --pale-dim: #6b5c57;
+  --pale-faint: #9a8b86;
 
-  --gradient-start: #e8cfc6;
-  --gradient-mid: #d9b9b0;
-  --gradient-end: #faf8f6;
+  --gradient-start: #e8d9d3;
+  --gradient-mid: #dcc5bd;
+  --gradient-end: #fbf9f7;
 }
 
 * {
