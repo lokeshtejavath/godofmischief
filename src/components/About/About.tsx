@@ -1,15 +1,48 @@
-import "./About.css"
+﻿import { motion } from 'framer-motion'
+import './About.css'
 
 export default function About() {
-    return (
-        <div className="about-container container my-5 p-4 bg-dark text-light rounded shadow">
-            <h1 className="display-4 mb-4">About Me</h1>
-            <p className="lead mb-3">
-                Hello, I'm Lokesh Tejavath. I bridge the gap between theoretical computer science and enterprise-scale software.
-            </p>
-            <p className="mb-0">
-                As a graduate of the National Institute of Technology (NIT) Warangal ('23) and a Software Engineer at Wells Fargo, I spend my days navigating the complex architecture of financial technology. By night, I explore the edges of the JavaScript ecosystem and information security. Whether I’m engineering resilient banking systems or building steganography tools to conceal digital messages, my code is driven by a passion for logic, security, and efficiency. I don't just write code; I solve problems.
-            </p>
-        </div>
-    );
+  const stats = [
+    { value: '5 min', label: 'Loan Review Time', description: 'Automated from 5 days via multi-agent system' },
+    { value: '3x', label: 'Manager Spotlight', description: 'Awards at Wells Fargo' },
+    { value: '3+', label: 'Years Experience', description: 'In financial tech & enterprise scale' },
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  }
+
+  return (
+    <section id="about" className="about">
+      <div className="about-container">
+        <motion.div className="about-grid" initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={containerVariants}>
+          <div className="about-text">
+            <motion.h2 variants={itemVariants}>About Me</motion.h2>
+            <motion.p variants={itemVariants}>I bridge theoretical computer science and enterprise-scale software. By day, I architect microservices and payment systems at Wells Fargo. By night, I explore the edges of the JavaScript ecosystem, agentic AI development, and the protocols that power decentralized trust.</motion.p>
+            <motion.p variants={itemVariants}>My specialty is turning complex problems into clean, maintainable systems. I've shipped loan-automation agents, built zero-trust infrastructure, and mentored teams. I believe in systems thinking, rigorous code review, and shipping with confidence.</motion.p>
+            <motion.div className="about-meta" variants={itemVariants}>
+              <div className="meta-item"><span className="meta-label">Location</span><span className="meta-value">Hyderabad, India</span></div>
+              <div className="meta-item"><span className="meta-label">Education</span><span className="meta-value">NIT Warangal, B.Tech CS (2019–2023)</span></div>
+              <div className="meta-item"><span className="meta-label">Current Role</span><span className="meta-value">Software Engineer AVP, Wells Fargo</span></div>
+            </motion.div>
+          </div>
+          <motion.div className="about-stats" variants={containerVariants}>
+            {stats.map((stat, index) => (
+              <motion.div key={index} className="stat-card" variants={itemVariants}>
+                <div className="stat-value">{stat.value}</div>
+                <div className="stat-label">{stat.label}</div>
+                <div className="stat-description">{stat.description}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
 }

@@ -1,0 +1,113 @@
+﻿.experience {
+  padding: 100px 2rem;
+  background: linear-gradient(180deg, var(--black) 0%, var(--black-soft) 100%);
+  transition: background 0.3s ease;
+}
+
+.experience-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  color: var(--pale);
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--maroon-dust) 0%, transparent 100%);
+  transition: background 0.3s ease;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -13px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--maroon-dust);
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  width: 20px;
+  height: 20px;
+  left: -17px;
+  background: var(--maroon);
+  box-shadow: 0 0 20px rgba(125, 58, 63, 0.4);
+}
+
+.timeline-content {
+  padding-left: 1rem;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  color: var(--pale);
+  margin: 0;
+  flex: 1;
+}
+
+.role-company {
+  color: var(--maroon-dust);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.role-period {
+  font-size: 0.9rem;
+  color: var(--pale-dim);
+  margin-bottom: 0.5rem;
+}
+
+.role-description {
+  color: var(--pale-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  .role-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+}

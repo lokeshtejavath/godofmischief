@@ -1,32 +1,73 @@
 
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import './NavBar.css'
+import { useTheme } from '../../context/ThemeContext'
+import type Lenis from 'lenis'
 
-export default function NavBar() {
-    return (
-        <>
-            <nav id="site-navbar" className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <div className="container-fluid">
-                    <span className="navbar-brand">&lt; LT /&gt;</span>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Services</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </>
-    );
+interface NavBarProps {
+  lenis: Lenis | null
+}
+
+export default function NavBar({ lenis }: NavBarProps) {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const { theme, toggleTheme } = useTheme()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollTo = (id: string) => {
+    if (lenis) {
+      const element = document.getElementById(id)
+      if (element) {
+        lenis.scrollTo(element, { duration: 1.2, offset: -80 })
+      }
+    } else {
+      // Fallback without Lenis
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+
+  return (
+    <motion.nav
+      className={`navbar ${isScrolled ? 'scrolled' : ''}`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      <div className="navbar-container">
+        <div className="navbar-brand">
+          {'< LT />'}
+        </div>
+
+        <div className="navbar-links">
+          <button onClick={() => scrollTo('hero')}>Hero</button>
+          <button onClick={() => scrollTo('about')}>About</button>
+          <button onClick={() => scrollTo('experience')}>Experience</button>
+          <button onClick={() => scrollTo('project')}>Project</button>
+          <button onClick={() => scrollTo('skills')}>Skills</button>
+          <button onClick={() => scrollTo('contact')}>Contact</button>
+        </div>
+
+        <motion.button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </motion.button>
+      </div>
+    </motion.nav>
+  )
 }
