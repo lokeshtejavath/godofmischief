@@ -135,21 +135,48 @@
 }
 
 @media (max-width: 768px) {
+  .featured-project {
+    padding: 60px 1rem;
+  }
+
+  .project-header h2 {
+    font-size: 2rem;
+  }
+
   .project-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-description p {
+    font-size: 1rem;
+  }
+
+  .tech-stack {
+    gap: 0.5rem;
+  }
+
+  .tech-stack span {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .pipeline-diagram {
+    gap: 0.75rem;
+  }
+
+  .stage-box {
+    min-width: 100px;
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
   }
 
   .project-impact {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .pipeline-diagram {
-    width: 100%;
-  }
-
-  .stage-box {
-    min-width: auto;
-    font-size: 0.9rem;
-    padding: 0.75rem 1rem;
+  .impact-number {
+    font-size: 2rem;
   }
 }

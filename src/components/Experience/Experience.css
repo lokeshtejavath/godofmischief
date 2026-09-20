@@ -110,16 +110,43 @@
 }
 
 @media (max-width: 768px) {
+  .experience {
+    padding: 60px 1rem;
+  }
+
   .experience h2 {
     font-size: 2rem;
   }
 
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline::before {
+    left: -6px;
+  }
+
+  .timeline-dot {
+    width: 10px;
+    height: 10px;
+    left: -10px;
+  }
+
   .role-header {
     flex-direction: column;
+    gap: 0.5rem;
     align-items: flex-start;
   }
 
   .timeline-content h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .role-period {
+    font-size: 0.85rem;
+  }
+
+  .role-description {
+    font-size: 0.9rem;
   }
 }

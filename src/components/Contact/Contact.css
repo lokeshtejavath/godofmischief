@@ -95,8 +95,16 @@
 }
 
 @media (max-width: 768px) {
+  .contact {
+    padding: 60px 1rem;
+  }
+
   .contact h2 {
     font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
   }
 
   .contact-links {
@@ -105,7 +113,16 @@
   }
 
   .contact-link {
-    padding: 0.85rem 1.5rem;
+    width: 100%;
+    padding: 1rem;
     justify-content: center;
+  }
+
+  .link-label {
+    font-size: 0.95rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
   }
 }

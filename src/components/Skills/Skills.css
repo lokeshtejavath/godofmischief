@@ -83,15 +83,25 @@
 }
 
 @media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .skills {
+    padding: 60px 1rem;
   }
 
   .skills h2 {
     font-size: 2rem;
   }
 
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .skill-group h3 {
     font-size: 1.1rem;
+  }
+
+  .skill-chip {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 }
