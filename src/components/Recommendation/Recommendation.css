@@ -1,6 +1,6 @@
 ﻿.recommendation {
   padding: 100px 2rem;
-  background: var(--black);
+  background: linear-gradient(180deg, var(--black) 0%, var(--black-soft) 100%);
   transition: background 0.3s ease;
 }
 
@@ -10,14 +10,41 @@
 }
 
 .quote-card {
-  background: rgba(10, 7, 8, 0.6);
+  background: rgba(18, 12, 13, 0.8);
   backdrop-filter: blur(12px);
   border: 1px solid var(--maroon-dust);
   border-radius: 12px;
   padding: 3rem;
   position: relative;
-  box-shadow: 0 12px 40px rgba(92, 31, 42, 0.2);
+  box-shadow: 0 12px 40px rgba(92, 31, 42, 0.25);
   transition: all 0.3s ease;
+}
+
+[data-theme='light'] .quote-card {
+  background: rgba(243, 237, 231, 0.9);
+  border-color: var(--maroon-dust);
+  box-shadow: 0 12px 40px rgba(139, 74, 82, 0.12);
+}
+
+[data-theme='light'] .quote-mark {
+  color: var(--maroon);
+  opacity: 0.2;
+}
+
+[data-theme='light'] .quote-text {
+  color: var(--pale);
+}
+
+[data-theme='light'] .author-name {
+  color: var(--pale);
+}
+
+[data-theme='light'] .author-title {
+  color: var(--pale-dim);
+}
+
+[data-theme='light'] .quote-card {
+  border-top: 1px solid var(--pale-faint);
 }
 
 .quote-mark {

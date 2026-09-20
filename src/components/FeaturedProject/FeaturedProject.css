@@ -1,6 +1,6 @@
 ﻿.featured-project {
   padding: 100px 2rem;
-  background: var(--black);
+  background: linear-gradient(180deg, var(--black) 0%, var(--black-soft) 100%);
   transition: background 0.3s ease;
 }
 
@@ -60,6 +60,12 @@
   font-weight: 500;
 }
 
+[data-theme='light'] .tech-stack span {
+  background: rgba(160, 85, 93, 0.08);
+  border-color: var(--maroon);
+  color: var(--pale);
+}
+
 .pipeline-diagram {
   display: flex;
   flex-direction: column;
@@ -88,6 +94,13 @@
   box-shadow: 0 4px 12px rgba(92, 31, 42, 0.2);
 }
 
+[data-theme='light'] .stage-box {
+  background: linear-gradient(135deg, rgba(160, 85, 93, 0.15), rgba(160, 85, 93, 0.1));
+  border-color: var(--maroon);
+  color: var(--pale);
+  box-shadow: 0 4px 12px rgba(139, 74, 82, 0.1);
+}
+
 .stage-arrow {
   font-size: 1.5rem;
   color: var(--maroon-dust);
@@ -110,6 +123,10 @@
   font-weight: 700;
   color: var(--maroon-dust);
   margin-bottom: 0.5rem;
+}
+
+[data-theme='light'] .impact-number {
+  color: var(--maroon);
 }
 
 .impact-text {

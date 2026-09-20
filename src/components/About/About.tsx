@@ -3,9 +3,9 @@ import './About.css'
 
 export default function About() {
   const stats = [
-    { value: '5 min', label: 'Loan Review Time', description: 'Automated from 5 days via multi-agent system' },
-    { value: '3x', label: 'Manager Spotlight', description: 'Awards at Wells Fargo' },
-    { value: '3+', label: 'Years Experience', description: 'In financial tech & enterprise scale' },
+    { value: '90%', label: 'Cost Reduction', description: 'Manual processing automation with GenAI' },
+    { value: '5 days→5min', label: 'Loan Automation', description: 'AI-powered review turnaround' },
+    { value: '3x', label: 'Manager Spotlight', description: 'Awards for delivery excellence' },
   ]
 
   const containerVariants = {

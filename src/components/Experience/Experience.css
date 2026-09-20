@@ -31,6 +31,10 @@
   transition: background 0.3s ease;
 }
 
+[data-theme='light'] .timeline::before {
+  background: linear-gradient(180deg, var(--maroon) 0%, rgba(160, 85, 93, 0.3) 100%);
+}
+
 .timeline-item {
   position: relative;
   margin-bottom: 2.5rem;
@@ -47,6 +51,10 @@
   border: 2px solid var(--black);
   border-radius: 50%;
   transition: all 0.3s ease;
+}
+
+[data-theme='light'] .timeline-dot {
+  border-color: var(--black-soft);
 }
 
 .timeline-item:hover .timeline-dot {
@@ -84,6 +92,10 @@
   letter-spacing: 0.5px;
   white-space: nowrap;
   transition: color 0.3s ease;
+}
+
+[data-theme='light'] .role-company {
+  color: var(--maroon);
 }
 
 .role-period {

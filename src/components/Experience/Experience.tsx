@@ -3,10 +3,10 @@ import './Experience.css'
 
 export default function Experience() {
   const roles = [
-    { title: 'Software Engineer AVP', company: 'Wells Fargo', period: 'Aug 2024 – Present', description: 'Leading enterprise-scale systems, mentoring engineers, driving architectural decisions.' },
-    { title: 'Program Associate AVP', company: 'Wells Fargo', period: 'Jul 2023 – Aug 2024', description: 'Built multi-agent automation systems, reduced manual review from 5 days to 5 minutes.' },
-    { title: 'IEEE Computer Society Chairperson', company: 'NIT Warangal', period: 'Feb – May 2023', description: 'Organized technical events, grew community engagement, fostered collaborative learning.' },
-    { title: 'Head of Operations', company: 'NITW News & Magazine Committee', period: 'Jul 2022 – May 2023', description: 'Managed editorial workflow, coordinated with 50+ contributors, shipped monthly publications.' },
+    { title: 'Software Engineer AVP', company: 'Wells Fargo', period: 'Jul 2024 – Present', description: 'Led enterprise GenAI products end-to-end, reduced costs by 90%, managed 5 major releases in 5 months, earned 3 Manager Spotlight Awards.' },
+    { title: 'Program Associate AVP', company: 'Wells Fargo', period: 'Jul 2023 – Jul 2024', description: 'Built multi-agent AI systems with LangChain/FastMCP, automated loan review from 5 days to under 5 minutes, deployed microservices on Kubernetes.' },
+    { title: 'IEEE Computer Society Chairperson', company: 'NIT Warangal', period: 'Feb – May 2023', description: 'Launched AI/ML and cybersecurity verticals, grew community participation by 60%, mentored technical initiatives across campus.' },
+    { title: 'Head of Operations', company: 'NITW News & Magazine', period: 'Jul 2022 – May 2023', description: 'Managed 40+ contributor team, doubled reader engagement, coordinated monthly publication cycles.' },
   ]
 
   const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } } }

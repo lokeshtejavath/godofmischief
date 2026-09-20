@@ -68,6 +68,17 @@
   box-shadow: 0 8px 24px rgba(93, 31, 42, 0.3);
 }
 
+[data-theme='light'] .cta-button.primary {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-deep));
+  color: var(--black);
+  border-color: var(--maroon);
+}
+
+[data-theme='light'] .cta-button.primary:hover {
+  background: linear-gradient(135deg, var(--maroon-deep), rgba(139, 74, 82, 0.9));
+  box-shadow: 0 8px 24px rgba(139, 74, 82, 0.2);
+}
+
 .cta-button.secondary {
   background: transparent;
   color: var(--pale);
@@ -77,6 +88,16 @@
 .cta-button.secondary:hover {
   border-color: var(--pale);
   box-shadow: inset 0 0 20px rgba(231, 217, 208, 0.1);
+}
+
+[data-theme='light'] .cta-button.secondary {
+  color: var(--pale);
+  border-color: var(--maroon);
+}
+
+[data-theme='light'] .cta-button.secondary:hover {
+  border-color: var(--maroon);
+  box-shadow: inset 0 0 20px rgba(160, 85, 93, 0.1);
 }
 
 .hero-visual {

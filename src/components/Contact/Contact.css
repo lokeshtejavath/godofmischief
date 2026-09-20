@@ -5,6 +5,10 @@
   transition: background 0.3s ease;
 }
 
+[data-theme='light'] .contact {
+  background: linear-gradient(180deg, var(--black) 0%, rgba(160, 85, 93, 0.1) 100%);
+}
+
 .contact-container {
   max-width: 900px;
   margin: 0 auto;
@@ -53,10 +57,25 @@
   box-shadow: 0 8px 24px rgba(125, 58, 63, 0.3);
 }
 
+[data-theme='light'] .contact-link {
+  background: rgba(243, 237, 231, 0.9);
+  border-color: var(--maroon);
+  color: var(--pale);
+}
+
+[data-theme='light'] .contact-link:hover {
+  background: rgba(236, 225, 217, 0.95);
+  box-shadow: 0 8px 24px rgba(139, 74, 82, 0.1);
+}
+
 .link-icon {
   font-weight: 700;
   color: var(--maroon-dust);
   font-size: 1.1rem;
+}
+
+[data-theme='light'] .link-icon {
+  color: var(--maroon);
 }
 
 .link-label {
